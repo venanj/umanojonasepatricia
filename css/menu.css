@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One");
+/* O menu da barra lateral*/
+.sidebar {
+    height: 100%; /* 100% de altura total*/
+    width: 0; /* 0 largura - altere isso com JavaScript */
+    position: fixed; /* Fique no lugar */
+    z-index: 1; /* Fique no topo */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Desativar rolagem horizontal */
+    padding-top: 60px; /* Coloque o conteúdo 60px a partir do topo */
+    transition: 0.5s; /* Efeito de transição de 0,5 segundo para deslizar na barra lateral */
+}
+/* Posicione e estilize o botão Fechar (canto superior direito)*/
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: -150px;
+    font-size: 36px;
+    margin-left: 1000px;
+}
+
+/* O botão usado para abrir a barra lateral*/
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 8px 10px;
+    border: none;
+	
+}
+
+.openbtn:hover {
+    background-color:#444;
+}
+
+/* Conteúdo da página de estilo - use isso se você quiser enviar o conteúdo da página para a direita quando abrir a navegação lateral */
+#main {
+	position: fixed;
+	top: 0;
+    transition: margin-left .5s;
+    padding: 1px;
+
+}
+
+/* Em telas menores, nas quais a altura é menor que 450 px, altere o estilo do sidenav (menos preenchimento e um tamanho de fonte menor) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+/*Menu drop*/
+/* Estilize os links do sidbar e o botão suspenso */
+.sidebar a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Ao passar do mouse */
+.sidebar a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Contêiner suspenso (oculto por padrão). 
+Opcional: adicione uma cor de fundo mais clara e 
+algum preenchimento à esquerda para alterar o design do
+ conteúdo suspenso */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+/*Opcional: estilize o ícone de interpolação */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+/*Mostrar barra ativa*/
+.active {
+  background-color: #3f3f3f;
+  color: white;
+}
+/*Final Menu suspenso*/

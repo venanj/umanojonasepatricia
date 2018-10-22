@@ -1,0 +1,120 @@
+
+/* Animação de rolagem */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/*Animação de Rolagem*/
+body {/*Fundo da tela*/
+	background-color: #232323 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+  
+}
+
+/* Posicione o recipiente de imagens (necessário para posicionar as setas esquerda e direita)*/
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: auto; 
+ /*Observação---- nessa div da pra redimencionar a caixa*/
+}
+
+/* Ocultar as imagens por padrão */
+.mySlides {
+  display: none;
+}
+
+/* Adicione um ponteiro ao passar o mouse sobre as imagens em miniatura */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 350px;
+  width: auto;
+  padding: 16px;
+  margin-top: -200px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Posicione o "próximo botão" à direita */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Ao passar o mouse, adicione uma cor de fundo preta com um pouco de transparência */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  
+}
+
+/*Recipiente para texto de imagem */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+  
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*15 colunas lado a lado, para 6 = 16.66% */
+.column {
+  float: left;
+  width: 06.66%;
+}
+
+/* Adicionar um efeito de transparência às imagens do thumnbail "0.6" */
+.demo {
+  opacity: 0.4;
+  
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
